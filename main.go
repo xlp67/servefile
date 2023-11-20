@@ -16,4 +16,5 @@ func main() {
 	mux.HandleFunc(config.PathRemoveBlock, internal.RemoveBlockHandle)
 	err = http.ListenAndServe(config.AppPort, mux)
 	if err != nil {log.Fatal(err)}
+	log.Printf("Server is running on port: %s", config.AppPort)
 }

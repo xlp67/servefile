@@ -26,6 +26,6 @@ jobs:
           context: .
           file: ./dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.repository }}:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/servefile:latest
       - name: Clean up
         run: rm servefile

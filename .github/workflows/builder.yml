@@ -27,5 +27,4 @@ jobs:
           file: ./dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/servefile:latest
-      - name: Clean up
-        run: rm servefile
+      

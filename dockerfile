@@ -4,7 +4,7 @@ COPY . .
 RUN go mod tidy
 RUN go build -o servefile
 
-FROM ubuntu:latest
+FROM nginx:latest
 WORKDIR /app
 COPY --from=builder /app/servefile .
 COPY --from=builder /app/config.json .
